@@ -38,29 +38,33 @@ ShineTicket follows **Clean Architecture**, ensuring that the core business logi
 ### Layers
 
 ├── Domain
-│ ├── Entities
-│ ├── ValueObjects
-│ └── Business Rules
+│   ├── Entities
+│   ├── ValueObjects
+│   └── BusinessRules
 │
 ├── Application
-│ ├── Use Cases
-│ ├── Commands & Queries (CQRS)
-│ ├── DTOs
-│ └── Interfaces
+│   ├── UseCases
+│   ├── Commands
+│   ├── Queries
+│   ├── DTOs
+│   └── Interfaces
 │
 ├── Infrastructure
-│ ├── Persistence (EF Core)
-│ ├── Repositories
-│ └── External Services
+│   ├── Persistence
+│   │   └── EFCore
+│   ├── Repositories
+│   └── ExternalServices
 │
 ├── API
-│ ├── Controllers
-│ ├── Request/Response Models
-│ └── Dependency Injection
+│   ├── Controllers
+│   ├── RequestModels
+│   ├── ResponseModels
+│   └── DependencyInjection
 │
 └── Tests
-├── Unit Tests
-└── Integration Tests
+    ├── UnitTests
+    └── IntegrationTests
+
 
 
 ### Key Principles
