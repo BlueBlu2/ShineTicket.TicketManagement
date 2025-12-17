@@ -37,6 +37,7 @@ ShineTicket follows **Clean Architecture**, ensuring that the core business logi
 
 ### Layers
 
+```
 ├── Domain
 │   ├── Entities
 │   ├── ValueObjects
@@ -64,7 +65,7 @@ ShineTicket follows **Clean Architecture**, ensuring that the core business logi
 └── Tests
     ├── UnitTests
     └── IntegrationTests
-
+```
 
 
 ### Key Principles
