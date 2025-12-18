@@ -4,6 +4,7 @@ using ShineTicket.TicketManagement.Application.Features.Categories.Queries.GetCa
 using ShineTicket.TicketManagement.Application.Features.Events.Commands.CreateEvent;
 using ShineTicket.TicketManagement.Application.Features.Events.Commands.UpdateEvent;
 using ShineTicket.TicketManagement.Application.Features.Events.Queries.GetEventDetail;
+using ShineTicket.TicketManagement.Application.Features.Events.Queries.GetEventsExport;
 using ShineTicket.TicketManagement.Application.Features.Events.Queries.GetEventsList;
 using ShineTicket.TicketManagement.Domain.Entities;
 using System;
@@ -28,6 +29,9 @@ namespace ShineTicket.TicketManagement.Application.Profiles
             CreateMap<Event, CreateEventCommand>().ReverseMap();
             CreateMap<Event, UpdateEventCommand>().ReverseMap();
             CreateMap<Event, CategoryEventDto>().ReverseMap();
+
+            CreateMap<Event, EventExportDto>().ReverseMap();
+
 
         }
     }

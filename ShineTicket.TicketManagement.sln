@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 18
-VisualStudioVersion = 18.1.11312.151 d18.0
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36518.9 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShineTicket.TicketManagement.Persistence", "ShineTicket.TicketManagement.Persistence\ShineTicket.TicketManagement.Persistence.csproj", "{B45BBDC6-6F7F-491B-9A6F-91E5DDDBFF5F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShineTicket.TicketManagement.Infrastructure", "ShineTicket.TicketManagement.Infrastructure\ShineTicket.TicketManagement.Infrastructure.csproj", "{D6F4D535-95A1-4EC5-BD54-83F29EDAAEAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShineTicket.TicketManagement.Api", "ShineTicket.TicketManagement.Api\ShineTicket.TicketManagement.Api.csproj", "{60D7AA22-C527-948B-6ADC-E38827831FE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{D6F4D535-95A1-4EC5-BD54-83F29EDAAEAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D6F4D535-95A1-4EC5-BD54-83F29EDAAEAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6F4D535-95A1-4EC5-BD54-83F29EDAAEAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60D7AA22-C527-948B-6ADC-E38827831FE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60D7AA22-C527-948B-6ADC-E38827831FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60D7AA22-C527-948B-6ADC-E38827831FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60D7AA22-C527-948B-6ADC-E38827831FE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,6 +64,7 @@ Global
 		{2EC4E56A-BE1D-4B5B-8181-A6B67160A66D} = {E9B9F898-B7B9-428F-9410-B7A0A2F23063}
 		{B45BBDC6-6F7F-491B-9A6F-91E5DDDBFF5F} = {24B09ADA-DACC-498B-8CA9-98A4458D838E}
 		{D6F4D535-95A1-4EC5-BD54-83F29EDAAEAE} = {24B09ADA-DACC-498B-8CA9-98A4458D838E}
+		{60D7AA22-C527-948B-6ADC-E38827831FE3} = {497D7C40-F70A-4A99-ABE3-C1C0712AE7C3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9C8C8393-55E7-4AED-9636-7216E7B2D83E}

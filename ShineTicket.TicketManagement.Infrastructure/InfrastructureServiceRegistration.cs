@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using ShineTicket.TicketManagement.Application.Contracts.Infrastructure;
 using ShineTicket.TicketManagement.Application.Models.Mail;
+using ShineTicket.TicketManagement.Infrastructure.FileExport;
 using ShineTicket.TicketManagement.Infrastructure.Mail;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,7 @@ namespace ShineTicket.TicketManagement.Infrastructure
             services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
 
             services.AddTransient<IEmailService, EmailService>();
+            services.AddTransient<ICsvExporter, CsvExporter>();
 
             return services;
         }
