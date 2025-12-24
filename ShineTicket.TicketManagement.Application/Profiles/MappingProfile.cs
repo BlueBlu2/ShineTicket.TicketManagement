@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ShineTicket.TicketManagement.Application.Features.Categories.Commands;
 using ShineTicket.TicketManagement.Application.Features.Categories.Queries.GetCategoriesList;
 using ShineTicket.TicketManagement.Application.Features.Categories.Queries.GetCategoriesListWithEvents;
 using ShineTicket.TicketManagement.Application.Features.Events.Commands.CreateEvent;
@@ -22,15 +23,16 @@ namespace ShineTicket.TicketManagement.Application.Profiles
             CreateMap<Event, EventListVm>().ReverseMap();
             CreateMap<Event, EventDetailVm>().ReverseMap();
             CreateMap<Category, CategoryDto>().ReverseMap();
-
-            CreateMap<Category,CategoryListVm>().ReverseMap();
+            CreateMap<Category, CategoryListVm>().ReverseMap();
             CreateMap<Category, CategoryEventListVm>().ReverseMap();
+            CreateMap<Category, CreateCategoryCommand>().ReverseMap();
+            CreateMap<Category, CreateCategoryDto>().ReverseMap();
+            CreateMap<Event, CategoryEventDto>().ReverseMap();
+            CreateMap<Event, EventExportDto>().ReverseMap();
 
             CreateMap<Event, CreateEventCommand>().ReverseMap();
             CreateMap<Event, UpdateEventCommand>().ReverseMap();
             CreateMap<Event, CategoryEventDto>().ReverseMap();
-
-            CreateMap<Event, EventExportDto>().ReverseMap();
 
 
         }

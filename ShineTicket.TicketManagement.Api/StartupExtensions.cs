@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using ShineTicket.TicketManagement.Api.Services;
 using ShineTicket.TicketManagement.Application;
+using ShineTicket.TicketManagement.Application.Contracts;
 using ShineTicket.TicketManagement.Infrastructure;
 using ShineTicket.TicketManagement.Persistence;
 namespace ShineTicket.TicketManagement.Api
@@ -11,6 +13,11 @@ namespace ShineTicket.TicketManagement.Api
             builder.Services.AddApplicationServices();
             builder.Services.AddInfrastructureServices(builder.Configuration);
             builder.Services.AddPersistenceServices(builder.Configuration);
+
+            builder.Services.AddScoped<ILoggedInUserService, LoggedInUserService>();
+
+            builder.Services.AddHttpContextAccessor();
+
 
             builder.Services.AddControllers();
 

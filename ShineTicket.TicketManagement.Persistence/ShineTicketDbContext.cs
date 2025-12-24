@@ -1,20 +1,27 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
+﻿using ShineTicket.TicketManagement.Application.Contracts;
 using ShineTicket.TicketManagement.Domain.Common;
 using ShineTicket.TicketManagement.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using ShineTicket.TicketManagement.Application.Contracts;
+using ShineTicket.TicketManagement.Domain.Common;
+using ShineTicket.TicketManagement.Domain.Entities;
 
 namespace ShineTicket.TicketManagement.Persistence
 {
-    public class ShineTicketDbContext: DbContext
+    public class ShineTicketDbContext : DbContext
     {
+        private readonly ILoggedInUserService? _loggedInUserService;
+
         public ShineTicketDbContext(DbContextOptions<ShineTicketDbContext> options)
-          : base(options)
+           : base(options)
         {
+        }
+
+        public ShineTicketDbContext(DbContextOptions<ShineTicketDbContext> options, ILoggedInUserService loggedInUserService)
+            : base(options)
+        {
+            _loggedInUserService = loggedInUserService;
         }
 
         public DbSet<Event> Events { get; set; }
@@ -196,9 +203,11 @@ namespace ShineTicket.TicketManagement.Persistence
                 {
                     case EntityState.Added:
                         entry.Entity.CreatedDate = DateTime.Now;
+                        entry.Entity.CreatedBy = _loggedInUserService.UserId;
                         break;
                     case EntityState.Modified:
                         entry.Entity.LastModifiedDate = DateTime.Now;
+                        entry.Entity.LastModifiedBy = _loggedInUserService.UserId;
                         break;
                 }
             }

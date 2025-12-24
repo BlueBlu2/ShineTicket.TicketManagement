@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36518.9 d17.14
+VisualStudioVersion = 17.14.36518.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -24,6 +24,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShineTicket.TicketManagement.Infrastructure", "ShineTicket.TicketManagement.Infrastructure\ShineTicket.TicketManagement.Infrastructure.csproj", "{D6F4D535-95A1-4EC5-BD54-83F29EDAAEAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShineTicket.TicketManagement.Api", "ShineTicket.TicketManagement.Api\ShineTicket.TicketManagement.Api.csproj", "{60D7AA22-C527-948B-6ADC-E38827831FE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShinTicket.TicketManagement.Application.UnitTests", "ShinTicket.TicketManagement.Application.UnitTests\ShinTicket.TicketManagement.Application.UnitTests.csproj", "{F94C100D-F10D-4AAD-A508-B34444D74B5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShineTicket.TicketManagement.Persistence.IntegrationTests", "ShineTicket.TicketManagement.Persistence.IntegrationTests\ShineTicket.TicketManagement.Persistence.IntegrationTests.csproj", "{1576D9A9-BAA5-4C0E-B0EB-CB2667BECC4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShineTicket.TicketManagement.API.IntegrationTests", "ShineTicket.TicketManagement.API.IntegrationTests\ShineTicket.TicketManagement.API.IntegrationTests.csproj", "{58AC7C7B-2221-463F-96DE-97F731C2AA00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +57,18 @@ Global
 		{60D7AA22-C527-948B-6ADC-E38827831FE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60D7AA22-C527-948B-6ADC-E38827831FE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60D7AA22-C527-948B-6ADC-E38827831FE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F94C100D-F10D-4AAD-A508-B34444D74B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F94C100D-F10D-4AAD-A508-B34444D74B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F94C100D-F10D-4AAD-A508-B34444D74B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F94C100D-F10D-4AAD-A508-B34444D74B5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1576D9A9-BAA5-4C0E-B0EB-CB2667BECC4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1576D9A9-BAA5-4C0E-B0EB-CB2667BECC4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1576D9A9-BAA5-4C0E-B0EB-CB2667BECC4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1576D9A9-BAA5-4C0E-B0EB-CB2667BECC4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58AC7C7B-2221-463F-96DE-97F731C2AA00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58AC7C7B-2221-463F-96DE-97F731C2AA00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58AC7C7B-2221-463F-96DE-97F731C2AA00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58AC7C7B-2221-463F-96DE-97F731C2AA00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +83,9 @@ Global
 		{B45BBDC6-6F7F-491B-9A6F-91E5DDDBFF5F} = {24B09ADA-DACC-498B-8CA9-98A4458D838E}
 		{D6F4D535-95A1-4EC5-BD54-83F29EDAAEAE} = {24B09ADA-DACC-498B-8CA9-98A4458D838E}
 		{60D7AA22-C527-948B-6ADC-E38827831FE3} = {497D7C40-F70A-4A99-ABE3-C1C0712AE7C3}
+		{F94C100D-F10D-4AAD-A508-B34444D74B5E} = {241EF5C8-01CD-4378-A44A-DB5BA207D9EA}
+		{1576D9A9-BAA5-4C0E-B0EB-CB2667BECC4D} = {241EF5C8-01CD-4378-A44A-DB5BA207D9EA}
+		{58AC7C7B-2221-463F-96DE-97F731C2AA00} = {241EF5C8-01CD-4378-A44A-DB5BA207D9EA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9C8C8393-55E7-4AED-9636-7216E7B2D83E}
