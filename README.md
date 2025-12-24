@@ -9,6 +9,7 @@ The project demonstrates how to design a scalable, maintainable, and testable sy
 ## 📌 Overview
 
 ShineTicket allows users to:
+
 - Browse available events
 - Reserve tickets with availability validation
 - Manage reservations and orders
@@ -34,38 +35,6 @@ The system is designed with a strong separation of concerns, making it easy to e
 ## 🏗️ Architecture
 
 ShineTicket follows **Clean Architecture**, ensuring that the core business logic is independent of frameworks, databases, and external services.
-
-### Layers
-
-```
-├── Domain
-│   ├── Entities
-│   ├── ValueObjects
-│   └── BusinessRules
-│
-├── Application
-│   ├── UseCases
-│   ├── Commands
-│   ├── Queries
-│   ├── DTOs
-│   └── Interfaces
-│
-├── Infrastructure
-│   ├── Persistence
-│   │   └── EFCore
-│   ├── Repositories
-│   └── ExternalServices
-│
-├── API
-│   ├── Controllers
-│   ├── RequestModels
-│   ├── ResponseModels
-│   └── DependencyInjection
-│
-└── Tests
-    ├── UnitTests
-    └── IntegrationTests
-```
 
 
 ### Key Principles
