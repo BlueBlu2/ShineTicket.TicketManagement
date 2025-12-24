@@ -31,6 +31,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShineTicket.TicketManagemen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShineTicket.TicketManagement.API.IntegrationTests", "ShineTicket.TicketManagement.API.IntegrationTests\ShineTicket.TicketManagement.API.IntegrationTests.csproj", "{58AC7C7B-2221-463F-96DE-97F731C2AA00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShineTicket.TicketManagement.App", "ShineTicket.TicketManagement.App\ShineTicket.TicketManagement.App.csproj", "{9E1F10CF-C6AF-AA25-0330-BF0820BA2058}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShineTicket.TicketManagement.Identity", "ShineTicket.TicketManagement.Identity\ShineTicket.TicketManagement.Identity.csproj", "{6DAB06FC-0EEA-4A45-AFEF-4A92A12C877B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{58AC7C7B-2221-463F-96DE-97F731C2AA00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58AC7C7B-2221-463F-96DE-97F731C2AA00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58AC7C7B-2221-463F-96DE-97F731C2AA00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E1F10CF-C6AF-AA25-0330-BF0820BA2058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E1F10CF-C6AF-AA25-0330-BF0820BA2058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E1F10CF-C6AF-AA25-0330-BF0820BA2058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E1F10CF-C6AF-AA25-0330-BF0820BA2058}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DAB06FC-0EEA-4A45-AFEF-4A92A12C877B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DAB06FC-0EEA-4A45-AFEF-4A92A12C877B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DAB06FC-0EEA-4A45-AFEF-4A92A12C877B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DAB06FC-0EEA-4A45-AFEF-4A92A12C877B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,6 +98,8 @@ Global
 		{F94C100D-F10D-4AAD-A508-B34444D74B5E} = {241EF5C8-01CD-4378-A44A-DB5BA207D9EA}
 		{1576D9A9-BAA5-4C0E-B0EB-CB2667BECC4D} = {241EF5C8-01CD-4378-A44A-DB5BA207D9EA}
 		{58AC7C7B-2221-463F-96DE-97F731C2AA00} = {241EF5C8-01CD-4378-A44A-DB5BA207D9EA}
+		{9E1F10CF-C6AF-AA25-0330-BF0820BA2058} = {8AC7759A-6361-4481-8BD1-208C24D09B67}
+		{6DAB06FC-0EEA-4A45-AFEF-4A92A12C877B} = {24B09ADA-DACC-498B-8CA9-98A4458D838E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9C8C8393-55E7-4AED-9636-7216E7B2D83E}

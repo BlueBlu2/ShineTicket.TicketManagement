@@ -7,9 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+
     <ProjectReference Include="..\ShineTicket.TicketManagement.Application\ShineTicket.TicketManagement.Application.csproj" />
+    <ProjectReference Include="..\ShineTicket.TicketManagement.Identity\ShineTicket.TicketManagement.Identity.csproj" />
+
     <ProjectReference Include="..\ShineTicket.TicketManagement.Infrastructure\ShineTicket.TicketManagement.Infrastructure.csproj" />
     <ProjectReference Include="..\ShineTicket.TicketManagement.Persistence\ShineTicket.TicketManagement.Persistence.csproj" />
+
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +25,15 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0-preview4.23342.2" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
+    <PackageReference Include="Serilog" Version="3.1.1" />
+    <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logs\" />
   </ItemGroup>
 
 </Project>

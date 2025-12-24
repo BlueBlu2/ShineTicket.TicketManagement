@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.Extensions.Logging;
 using ShineTicket.TicketManagement.Application.Contracts.Infrastructure;
 using ShineTicket.TicketManagement.Application.Contracts.Persistance;
 using ShineTicket.TicketManagement.Application.Models.Mail;
@@ -12,33 +13,32 @@ namespace ShineTicket.TicketManagement.Application.Features.Events.Commands.Crea
         private readonly IEventRepository _eventRepository;
         private readonly IMapper _mapper;
         private readonly IEmailService _emailService;
+        private readonly ILogger<CreateEventCommandHandler> _logger;
 
-        public CreateEventCommandHandler(IMapper mapper, IEventRepository eventRepository, IEmailService emailService)
+
+        public CreateEventCommandHandler(IMapper mapper, IEventRepository eventRepository, IEmailService emailService, ILogger<CreateEventCommandHandler> logger)
         {
             _mapper = mapper;
             _eventRepository = eventRepository;
             _emailService = emailService;
+            _logger = logger;
         }
 
         public async Task<Guid> Handle(CreateEventCommand request, CancellationToken cancellationToken)
         {
-            var @event = _mapper.Map<Event>(request);
-
             var validator = new CreateEventCommandValidator(_eventRepository);
             var validationResult = await validator.ValidateAsync(request);
 
             if (validationResult.Errors.Count > 0)
                 throw new Exceptions.ValidationException(validationResult);
 
+            var @event = _mapper.Map<Event>(request);
+
+
             @event = await _eventRepository.AddAsync(@event);
 
-            //sending email to the admin address
-            var email = new Email()
-            {
-                To = "eng.abdalrhmn.h@gmail.com",
-                Body = $"A new event was created: {request}",
-                Subject = "A new event was created"
-            };
+
+            var email = new Email() { To = "eng.abdalrhmn.h@gmail.com", Body = $"A new event was created: {request}", Subject = "A new event was created" };
 
             try
             {
@@ -46,7 +46,8 @@ namespace ShineTicket.TicketManagement.Application.Features.Events.Commands.Crea
             }
             catch (Exception ex)
             {
-                //logging here
+                //this shouldn't stop the API from doing else so this can be logged
+                _logger.LogError($"Mailing about event {@event.EventId} failed due to an error with the mail service: {ex.Message}");
             }
 
             return @event.EventId;

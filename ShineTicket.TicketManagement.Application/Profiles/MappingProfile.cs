@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ShineTicket.TicketManagement.Application.Contracts.Infrastructure;
 using ShineTicket.TicketManagement.Application.Features.Categories.Commands;
 using ShineTicket.TicketManagement.Application.Features.Categories.Queries.GetCategoriesList;
 using ShineTicket.TicketManagement.Application.Features.Categories.Queries.GetCategoriesListWithEvents;
@@ -7,6 +8,8 @@ using ShineTicket.TicketManagement.Application.Features.Events.Commands.UpdateEv
 using ShineTicket.TicketManagement.Application.Features.Events.Queries.GetEventDetail;
 using ShineTicket.TicketManagement.Application.Features.Events.Queries.GetEventsExport;
 using ShineTicket.TicketManagement.Application.Features.Events.Queries.GetEventsList;
+using ShineTicket.TicketManagement.Application.Features.Orders.Queries.GetOrdersForMonth;
+using ShineTicket.TicketManagement.Application.Models.Mail;
 using ShineTicket.TicketManagement.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -33,6 +36,10 @@ namespace ShineTicket.TicketManagement.Application.Profiles
             CreateMap<Event, CreateEventCommand>().ReverseMap();
             CreateMap<Event, UpdateEventCommand>().ReverseMap();
             CreateMap<Event, CategoryEventDto>().ReverseMap();
+
+            CreateMap<Order, OrdersForMonthDto>();
+
+            //CreateMap<Email, IEmailService>().ReverseMap();
 
 
         }

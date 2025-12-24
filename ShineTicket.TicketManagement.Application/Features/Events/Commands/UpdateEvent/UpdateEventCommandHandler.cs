@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
+using FluentValidation;
 using MediatR;
 using ShineTicket.TicketManagement.Application.Contracts.Persistance;
+using ShineTicket.TicketManagement.Application.Exceptions;
 using ShineTicket.TicketManagement.Domain.Entities;
 
 namespace ShineTicket.TicketManagement.Application.Features.Events.Commands.UpdateEvent
@@ -20,6 +22,17 @@ namespace ShineTicket.TicketManagement.Application.Features.Events.Commands.Upda
         {
 
             var eventToUpdate = await _eventRepository.GetByIdAsync(request.EventId);
+
+            if (eventToUpdate == null)
+            {
+                throw new NotFoundException(nameof(Event), request.EventId);
+            }
+
+            var validator = new UpdateEventCommandValidator();
+            var validationResult = await validator.ValidateAsync(request);
+
+            if (validationResult.Errors.Count > 0)
+                throw new Exceptions.ValidationException(validationResult);
 
             _mapper.Map(request, eventToUpdate, typeof(UpdateEventCommand), typeof(Event));
 
